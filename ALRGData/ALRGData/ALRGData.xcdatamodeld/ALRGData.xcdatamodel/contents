@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Food" representedClassName="ALRGData.Food" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="ALRGData.Person" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cants" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Food" syncable="YES"/>
+        <relationship name="likes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Food" syncable="YES"/>
+        <relationship name="loves" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Food" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-344" positionY="38" width="128" height="133"/>
+        <element name="Food" positionX="43" positionY="-46" width="128" height="73"/>
+    </elements>
+</model>
