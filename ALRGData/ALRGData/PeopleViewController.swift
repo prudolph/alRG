@@ -23,7 +23,12 @@ class PeopleViewController: UITableViewController,UITableViewDataSource,UITableV
        managedContex = applicationDelegate.managedObjectContext
         
         
-        self.tableView.tableHeaderView = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as? UITableViewCell
+        
+        
+        var nib = UINib(nibName: "PersonTableViewCell", bundle: nil)
+        
+        tableView.registerNib(nib, forCellReuseIdentifier: "PersonTableCell")
+        
     
     }
     
@@ -63,12 +68,13 @@ class PeopleViewController: UITableViewController,UITableViewDataSource,UITableV
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("PersonCell") as? UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("PersonTableCell") as? PersonTableViewCell
         
         var person:Person = peopleArray[indexPath.row] as Person
         var personStr = person.firstName + " " + person.lastName
-        cell?.textLabel!.text = personStr
-        
+
+        cell?.personNameLabel.text = person.firstName
+        cell?.backgroundColor = colorDict[person.color]
         
         return cell!
     }
@@ -76,7 +82,20 @@ class PeopleViewController: UITableViewController,UITableViewDataSource,UITableV
     
   
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 105.0
+    }
     
+override    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 105.0
+    }
+    
+   override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+    
+    return tableView.dequeueReusableCellWithIdentifier("HeaderCell") as? UIView
+
+    }
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "NewPersonSegue"){

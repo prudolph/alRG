@@ -15,7 +15,7 @@ class NewPersonViewController: UIViewController,UITextFieldDelegate {
     
     var managedContex:NSManagedObjectContext?
     var colorButtonsArray = [UIButton]()
-    var selectedColor:String = ""
+    var selectedColorButtonIndex:Int?
     
     @IBOutlet weak var firstNamefield: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
@@ -48,39 +48,40 @@ class NewPersonViewController: UIViewController,UITextFieldDelegate {
         colorButtonsView.setTranslatesAutoresizingMaskIntoConstraints(false)
         
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[lastView(100)]", options: nil, metrics: nil, views: autoLayoutDict))
+            "V:[lastView]", options: nil, metrics: nil, views: autoLayoutDict))
         
-        var row = 0
-        var col = 0
-        
+        var dotsPerRow = 4
+        var dotSize = 70
+        var dotSpacing = 15
           for  var i = 0;i < 7; ++i {
         
             var butt = UIButton()
             butt.addTarget(self, action: "colorButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-            butt.layer.cornerRadius   = 25
+            butt.layer.cornerRadius = CGFloat(dotSize / 2)
             butt.backgroundColor = colorDict.values.array[i] as UIColor
+            butt.tag = i
             
             colorButtonsView.addSubview(butt)
+            colorButtonsArray.append(butt)
             butt.setTranslatesAutoresizingMaskIntoConstraints(false)
             autoLayoutDict["currentButt"] = butt
             
-            if(i < 4){
+            if(i < dotsPerRow){
                 self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-                    "V:|-5-[currentButt(50)]", options: nil, metrics: nil, views: autoLayoutDict))
+                    "V:|-5-[currentButt(\(dotSize))]", options: nil, metrics: nil, views: autoLayoutDict))
             }else{
                 
-                
                 self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-                    "V:|-55-[currentButt(50)]", options: nil, metrics: nil, views: autoLayoutDict))
+                    "V:|-\(dotSize + dotSpacing)-[currentButt(\(dotSize))]-|", options: nil, metrics: nil, views: autoLayoutDict))
             }
             
-            if(i == 0){
+            if(i == 0 || i == dotsPerRow){
                 self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-                    "H:|-[currentButt(50)]", options: nil, metrics: nil, views: autoLayoutDict))
+                    "H:|-[currentButt(\(dotSize))]", options: nil, metrics: nil, views: autoLayoutDict))
             }else{
                 
                 self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-                    "H:[lastView]-[currentButt(50)]", options: nil, metrics: nil, views: autoLayoutDict))
+                    "H:[lastView]-\(dotSpacing)-[currentButt(\(dotSize))]", options: nil, metrics: nil, views: autoLayoutDict))
                 
             }
               autoLayoutDict["lastView"] = butt
@@ -90,14 +91,46 @@ class NewPersonViewController: UIViewController,UITextFieldDelegate {
     }
     
     func colorButtonPressed(sender: AnyObject){
-        println("ColorButton Pressed\(sender)")
-    
+        if let  button = sender as? UIButton{
+            
+            println("ColorButton Pressed\(button.tag)")
+            highlightColorButton(button.tag)
+             selectedColorButtonIndex = button.tag
+        }
     }
     
+    func highlightColorButton(index:Int){
+        
+        
+        if(selectedColorButtonIndex != nil){
+            var oldButton =      colorButtonsArray[selectedColorButtonIndex!]
+            UIView.animateWithDuration(1.50, animations: {
+                oldButton.layer.borderColor = UIColor.whiteColor().CGColor
+                oldButton.layer.borderWidth = 0.0
+                
+            })
+        }
+        
+        var selectedButton = colorButtonsArray[index]
+    
+     
+      //TO ANIMATE THIS WE NEED CAANIMATION
+       
+        
+            selectedButton.layer.borderColor = UIColor.whiteColor().CGColor
+            selectedButton.layer.borderWidth = 5.0
+        
+       
+        
+    }
+    
+    
+    
     @IBAction func savePressed(sender: AnyObject) {
+        var colorString = colorDict.keys.array[selectedColorButtonIndex!]
+     
         
-        
-        var newperson =  Person(firstName: firstNamefield.text, lastName: lastNameField.text, color: "RED", context:managedContex!)
+        var newperson =  Person(firstName: firstNamefield.text, lastName: lastNameField.text, color: colorString, context:managedContex!)
         
         
         var error: NSError?

@@ -13,7 +13,7 @@
         <relationship name="loves" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Food" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Person" positionX="-344" positionY="38" width="128" height="133"/>
         <element name="Food" positionX="43" positionY="-46" width="128" height="73"/>
+        <element name="Person" positionX="-344" positionY="38" width="128" height="135"/>
     </elements>
 </model>
