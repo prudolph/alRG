@@ -96,6 +96,15 @@ override    func tableView(tableView: UITableView, heightForHeaderInSection sect
     return tableView.dequeueReusableCellWithIdentifier("HeaderCell") as? UIView
 
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Tapped cell \(indexPath.row)")
+        performSegueWithIdentifier("PeopleToDetailSegue", sender: peopleArray[indexPath.row])
+        
+    }
+    
+    
+    
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "NewPersonSegue"){
@@ -103,6 +112,15 @@ override    func tableView(tableView: UITableView, heightForHeaderInSection sect
             //Pass along the managed context to we dont have to traverse again
             destinationViewController.managedContex = managedContex
         
+        }else if (segue.identifier == "PeopleToDetailSegue"){
+        
+            if let personData = sender as? Person{
+                if let  personDetailViewController = segue.destinationViewController as?PersonDetailViewController{
+                    
+                personDetailViewController.personObject = personData
+                }
+                
+            }
         }
     }
 

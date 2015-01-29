@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A564A4711A79B8DA0054F12D /* FoodCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564A46F1A79B8DA0054F12D /* FoodCategoryViewController.swift */; };
+		A564A4721A79B8DA0054F12D /* FoodCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A564A4701A79B8DA0054F12D /* FoodCategoryViewController.xib */; };
+		A564A4741A7A6AD60054F12D /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564A4731A7A6AD60054F12D /* PersonDetailViewController.swift */; };
 		A5CCC6111A673D31001F3B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CCC6101A673D31001F3B76 /* AppDelegate.swift */; };
 		A5CCC6141A673D31001F3B76 /* ALRGData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5CCC6121A673D31001F3B76 /* ALRGData.xcdatamodeld */; };
 		A5CCC6161A673D31001F3B76 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CCC6151A673D31001F3B76 /* PeopleViewController.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A564A46F1A79B8DA0054F12D /* FoodCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCategoryViewController.swift; sourceTree = "<group>"; };
+		A564A4701A79B8DA0054F12D /* FoodCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodCategoryViewController.xib; sourceTree = "<group>"; };
+		A564A4731A7A6AD60054F12D /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		A5CCC60B1A673D31001F3B76 /* ALRGData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALRGData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CCC60F1A673D31001F3B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5CCC6101A673D31001F3B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +110,9 @@
 				A5CCC6391A675607001F3B76 /* Globals.swift */,
 				A5F6CA221A744779004D28DB /* PersonTableViewCell.swift */,
 				A5F6CA231A744779004D28DB /* PersonTableViewCell.xib */,
+				A564A46F1A79B8DA0054F12D /* FoodCategoryViewController.swift */,
+				A564A4701A79B8DA0054F12D /* FoodCategoryViewController.xib */,
+				A564A4731A7A6AD60054F12D /* PersonDetailViewController.swift */,
 			);
 			path = ALRGData;
 			sourceTree = "<group>";
@@ -213,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A564A4721A79B8DA0054F12D /* FoodCategoryViewController.xib in Resources */,
 				A5CCC6191A673D31001F3B76 /* Main.storyboard in Resources */,
 				A5CCC61E1A673D31001F3B76 /* LaunchScreen.xib in Resources */,
 				A5F6CA251A744779004D28DB /* PersonTableViewCell.xib in Resources */,
@@ -238,9 +248,11 @@
 				A5CCC6361A673EE8001F3B76 /* Person.swift in Sources */,
 				A5CCC6161A673D31001F3B76 /* PeopleViewController.swift in Sources */,
 				A5CCC6341A673EE7001F3B76 /* Food.swift in Sources */,
+				A564A4711A79B8DA0054F12D /* FoodCategoryViewController.swift in Sources */,
 				A5CCC6111A673D31001F3B76 /* AppDelegate.swift in Sources */,
 				A5CCC63A1A675607001F3B76 /* Globals.swift in Sources */,
 				A5F6CA241A744779004D28DB /* PersonTableViewCell.swift in Sources */,
+				A564A4741A7A6AD60054F12D /* PersonDetailViewController.swift in Sources */,
 				A5CCC6141A673D31001F3B76 /* ALRGData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
