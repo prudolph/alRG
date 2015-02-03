@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A564A4711A79B8DA0054F12D /* FoodCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564A46F1A79B8DA0054F12D /* FoodCategoryViewController.swift */; };
-		A564A4721A79B8DA0054F12D /* FoodCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A564A4701A79B8DA0054F12D /* FoodCategoryViewController.xib */; };
+		A564A4711A79B8DA0054F12D /* FoodCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564A46F1A79B8DA0054F12D /* FoodCategoryTableViewCell.swift */; };
 		A564A4741A7A6AD60054F12D /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A564A4731A7A6AD60054F12D /* PersonDetailViewController.swift */; };
 		A5CCC6111A673D31001F3B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CCC6101A673D31001F3B76 /* AppDelegate.swift */; };
 		A5CCC6141A673D31001F3B76 /* ALRGData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5CCC6121A673D31001F3B76 /* ALRGData.xcdatamodeld */; };
@@ -21,6 +20,10 @@
 		A5CCC6361A673EE8001F3B76 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CCC6351A673EE8001F3B76 /* Person.swift */; };
 		A5CCC6381A674804001F3B76 /* NewPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CCC6371A674804001F3B76 /* NewPersonViewController.swift */; };
 		A5CCC63A1A675607001F3B76 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CCC6391A675607001F3B76 /* Globals.swift */; };
+		A5CEDA8A1A80710E007CAA83 /* heartIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CEDA891A80710E007CAA83 /* heartIcon.png */; };
+		A5CEDA8C1A807115007CAA83 /* cantIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CEDA8B1A807115007CAA83 /* cantIcon.png */; };
+		A5CEDA8E1A80711D007CAA83 /* thumbIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CEDA8D1A80711D007CAA83 /* thumbIcon.png */; };
+		A5CEDA901A807326007CAA83 /* backArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CEDA8F1A807326007CAA83 /* backArrow.png */; };
 		A5F6CA241A744779004D28DB /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F6CA221A744779004D28DB /* PersonTableViewCell.swift */; };
 		A5F6CA251A744779004D28DB /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6CA231A744779004D28DB /* PersonTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -36,8 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A564A46F1A79B8DA0054F12D /* FoodCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCategoryViewController.swift; sourceTree = "<group>"; };
-		A564A4701A79B8DA0054F12D /* FoodCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodCategoryViewController.xib; sourceTree = "<group>"; };
+		A564A46F1A79B8DA0054F12D /* FoodCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		A564A4731A7A6AD60054F12D /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		A5CCC60B1A673D31001F3B76 /* ALRGData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALRGData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CCC60F1A673D31001F3B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +56,10 @@
 		A5CCC6351A673EE8001F3B76 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A5CCC6371A674804001F3B76 /* NewPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPersonViewController.swift; sourceTree = "<group>"; };
 		A5CCC6391A675607001F3B76 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		A5CEDA891A80710E007CAA83 /* heartIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartIcon.png; sourceTree = "<group>"; };
+		A5CEDA8B1A807115007CAA83 /* cantIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cantIcon.png; sourceTree = "<group>"; };
+		A5CEDA8D1A80711D007CAA83 /* thumbIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbIcon.png; sourceTree = "<group>"; };
+		A5CEDA8F1A807326007CAA83 /* backArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow.png; sourceTree = "<group>"; };
 		A5F6CA221A744779004D28DB /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		A5F6CA231A744779004D28DB /* PersonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +85,7 @@
 		A5CCC6021A673D30001F3B76 = {
 			isa = PBXGroup;
 			children = (
+				A5CEDA881A8070FF007CAA83 /* Icons */,
 				A5CCC60D1A673D31001F3B76 /* ALRGData */,
 				A5CCC6261A673D31001F3B76 /* ALRGDataTests */,
 				A5CCC60C1A673D31001F3B76 /* Products */,
@@ -110,8 +117,7 @@
 				A5CCC6391A675607001F3B76 /* Globals.swift */,
 				A5F6CA221A744779004D28DB /* PersonTableViewCell.swift */,
 				A5F6CA231A744779004D28DB /* PersonTableViewCell.xib */,
-				A564A46F1A79B8DA0054F12D /* FoodCategoryViewController.swift */,
-				A564A4701A79B8DA0054F12D /* FoodCategoryViewController.xib */,
+				A564A46F1A79B8DA0054F12D /* FoodCategoryTableViewCell.swift */,
 				A564A4731A7A6AD60054F12D /* PersonDetailViewController.swift */,
 			);
 			path = ALRGData;
@@ -140,6 +146,17 @@
 				A5CCC6281A673D31001F3B76 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5CEDA881A8070FF007CAA83 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				A5CEDA8D1A80711D007CAA83 /* thumbIcon.png */,
+				A5CEDA8B1A807115007CAA83 /* cantIcon.png */,
+				A5CEDA8F1A807326007CAA83 /* backArrow.png */,
+				A5CEDA891A80710E007CAA83 /* heartIcon.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,11 +239,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A564A4721A79B8DA0054F12D /* FoodCategoryViewController.xib in Resources */,
+				A5CEDA8C1A807115007CAA83 /* cantIcon.png in Resources */,
 				A5CCC6191A673D31001F3B76 /* Main.storyboard in Resources */,
 				A5CCC61E1A673D31001F3B76 /* LaunchScreen.xib in Resources */,
 				A5F6CA251A744779004D28DB /* PersonTableViewCell.xib in Resources */,
+				A5CEDA901A807326007CAA83 /* backArrow.png in Resources */,
 				A5CCC61B1A673D31001F3B76 /* Images.xcassets in Resources */,
+				A5CEDA8E1A80711D007CAA83 /* thumbIcon.png in Resources */,
+				A5CEDA8A1A80710E007CAA83 /* heartIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +268,7 @@
 				A5CCC6361A673EE8001F3B76 /* Person.swift in Sources */,
 				A5CCC6161A673D31001F3B76 /* PeopleViewController.swift in Sources */,
 				A5CCC6341A673EE7001F3B76 /* Food.swift in Sources */,
-				A564A4711A79B8DA0054F12D /* FoodCategoryViewController.swift in Sources */,
+				A564A4711A79B8DA0054F12D /* FoodCategoryTableViewCell.swift in Sources */,
 				A5CCC6111A673D31001F3B76 /* AppDelegate.swift in Sources */,
 				A5CCC63A1A675607001F3B76 /* Globals.swift in Sources */,
 				A5F6CA241A744779004D28DB /* PersonTableViewCell.swift in Sources */,
