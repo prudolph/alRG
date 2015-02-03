@@ -75,7 +75,21 @@ class PersonDetailViewController: UIViewController, UITableViewDataSource,UITabl
         return cell
     
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        self.performSegueWithIdentifier("toCategoryDetailSegue", sender: nil)
+        
+    }
 
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "toCategoryDetailSegue"){
+        
+        
+        }
+    }
+    
     @IBAction func backButtonPressed(sender: AnyObject) {
         
         self.navigationController?.popViewControllerAnimated(true)

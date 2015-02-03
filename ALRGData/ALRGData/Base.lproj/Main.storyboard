@@ -239,11 +239,59 @@
                     <connections>
                         <outlet property="personImageView" destination="bv3-QI-x5k" id="6fu-fa-0Mg"/>
                         <outlet property="tableView" destination="lcz-g2-I8s" id="iPd-A0-CG3"/>
+                        <segue destination="vfv-Rw-o3t" kind="show" identifier="toCategoryDetailSegue" id="xug-M9-LNh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nN-4B-UVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1173" y="436"/>
+        </scene>
+        <!--Category Detail View Controller-->
+        <scene sceneID="cO2-Cv-TvT">
+            <objects>
+                <viewController id="vfv-Rw-o3t" customClass="CategoryDetailViewController" customModule="ALRGData" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oXx-Xu-eaa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bfu-wG-Y9S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EEq-gM-jVe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGO-Az-5ge">
+                                <rect key="frame" x="31" y="542" width="46" height="38"/>
+                                <state key="normal" image="backArrow.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="vfv-Rw-o3t" eventType="touchUpInside" id="QA3-BS-Erk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIn-y6-AKd">
+                                <rect key="frame" x="27" y="40" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mzA-rx-LcZ">
+                                <rect key="frame" x="270" y="215" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nGO-Az-5ge" firstAttribute="leading" secondItem="EEq-gM-jVe" secondAttribute="leadingMargin" constant="10" id="1WH-rL-aTi"/>
+                            <constraint firstItem="KIn-y6-AKd" firstAttribute="leading" secondItem="EEq-gM-jVe" secondAttribute="leadingMargin" constant="10" id="8Kx-gc-o5t"/>
+                            <constraint firstItem="mzA-rx-LcZ" firstAttribute="leading" secondItem="EEq-gM-jVe" secondAttribute="leadingMargin" constant="254" id="Ttv-8I-29z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mzA-rx-LcZ" secondAttribute="trailing" constant="14" id="bde-XN-Zuz"/>
+                            <constraint firstItem="mzA-rx-LcZ" firstAttribute="top" secondItem="oXx-Xu-eaa" secondAttribute="bottom" constant="215" id="bgA-vT-0zP"/>
+                            <constraint firstItem="KIn-y6-AKd" firstAttribute="top" secondItem="oXx-Xu-eaa" secondAttribute="bottom" constant="40" id="cKE-dI-woG"/>
+                            <constraint firstItem="Bfu-wG-Y9S" firstAttribute="top" secondItem="mzA-rx-LcZ" secondAttribute="bottom" constant="85" id="dnV-tt-cVd"/>
+                            <constraint firstItem="Bfu-wG-Y9S" firstAttribute="top" secondItem="nGO-Az-5ge" secondAttribute="bottom" constant="20" id="e8N-Ao-igt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5c-Et-zdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992" y="436"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hHs-dK-LNT">

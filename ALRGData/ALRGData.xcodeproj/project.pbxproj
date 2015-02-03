@@ -24,6 +24,7 @@
 		A5CEDA8C1A807115007CAA83 /* cantIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CEDA8B1A807115007CAA83 /* cantIcon.png */; };
 		A5CEDA8E1A80711D007CAA83 /* thumbIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CEDA8D1A80711D007CAA83 /* thumbIcon.png */; };
 		A5CEDA901A807326007CAA83 /* backArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CEDA8F1A807326007CAA83 /* backArrow.png */; };
+		A5CEDA921A80FB8D007CAA83 /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CEDA911A80FB8D007CAA83 /* CategoryDetailViewController.swift */; };
 		A5F6CA241A744779004D28DB /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F6CA221A744779004D28DB /* PersonTableViewCell.swift */; };
 		A5F6CA251A744779004D28DB /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F6CA231A744779004D28DB /* PersonTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		A5CEDA8B1A807115007CAA83 /* cantIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cantIcon.png; sourceTree = "<group>"; };
 		A5CEDA8D1A80711D007CAA83 /* thumbIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbIcon.png; sourceTree = "<group>"; };
 		A5CEDA8F1A807326007CAA83 /* backArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow.png; sourceTree = "<group>"; };
+		A5CEDA911A80FB8D007CAA83 /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
 		A5F6CA221A744779004D28DB /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		A5F6CA231A744779004D28DB /* PersonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,21 +106,15 @@
 		A5CCC60D1A673D31001F3B76 /* ALRGData */ = {
 			isa = PBXGroup;
 			children = (
-				A5CCC6101A673D31001F3B76 /* AppDelegate.swift */,
-				A5CCC6151A673D31001F3B76 /* PeopleViewController.swift */,
-				A5CCC6371A674804001F3B76 /* NewPersonViewController.swift */,
-				A5CCC6171A673D31001F3B76 /* Main.storyboard */,
+				A5CEDA931A810089007CAA83 /* DataTypes */,
 				A5CCC61A1A673D31001F3B76 /* Images.xcassets */,
 				A5CCC61C1A673D31001F3B76 /* LaunchScreen.xib */,
 				A5CCC6121A673D31001F3B76 /* ALRGData.xcdatamodeld */,
-				A5CCC6351A673EE8001F3B76 /* Person.swift */,
-				A5CCC6331A673EE7001F3B76 /* Food.swift */,
 				A5CCC60E1A673D31001F3B76 /* Supporting Files */,
 				A5CCC6391A675607001F3B76 /* Globals.swift */,
-				A5F6CA221A744779004D28DB /* PersonTableViewCell.swift */,
-				A5F6CA231A744779004D28DB /* PersonTableViewCell.xib */,
-				A564A46F1A79B8DA0054F12D /* FoodCategoryTableViewCell.swift */,
-				A564A4731A7A6AD60054F12D /* PersonDetailViewController.swift */,
+				A5CCC6101A673D31001F3B76 /* AppDelegate.swift */,
+				A5CCC6171A673D31001F3B76 /* Main.storyboard */,
+				A5CEDA941A81009E007CAA83 /* ViewControllers */,
 			);
 			path = ALRGData;
 			sourceTree = "<group>";
@@ -157,6 +153,29 @@
 				A5CEDA891A80710E007CAA83 /* heartIcon.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		A5CEDA931A810089007CAA83 /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				A5CCC6331A673EE7001F3B76 /* Food.swift */,
+				A5CCC6351A673EE8001F3B76 /* Person.swift */,
+			);
+			name = DataTypes;
+			sourceTree = "<group>";
+		};
+		A5CEDA941A81009E007CAA83 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5CEDA911A80FB8D007CAA83 /* CategoryDetailViewController.swift */,
+				A5CCC6371A674804001F3B76 /* NewPersonViewController.swift */,
+				A564A46F1A79B8DA0054F12D /* FoodCategoryTableViewCell.swift */,
+				A5F6CA221A744779004D28DB /* PersonTableViewCell.swift */,
+				A5F6CA231A744779004D28DB /* PersonTableViewCell.xib */,
+				A5CCC6151A673D31001F3B76 /* PeopleViewController.swift */,
+				A564A4731A7A6AD60054F12D /* PersonDetailViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +292,7 @@
 				A5CCC63A1A675607001F3B76 /* Globals.swift in Sources */,
 				A5F6CA241A744779004D28DB /* PersonTableViewCell.swift in Sources */,
 				A564A4741A7A6AD60054F12D /* PersonDetailViewController.swift in Sources */,
+				A5CEDA921A80FB8D007CAA83 /* CategoryDetailViewController.swift in Sources */,
 				A5CCC6141A673D31001F3B76 /* ALRGData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
